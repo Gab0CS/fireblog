@@ -2,10 +2,11 @@
 import { auth, googleAuthProvider } from '@/lib/firebase';
 import React from 'react'
 import { FaGoogle } from "react-icons/fa";
+import { useContext } from 'react';
+import { UserContext } from '@/lib/context';
 
 const page = () => {
-  const user = null;
-  const username = null;
+  const { user, username } = useContext(UserContext)
   return (
     <main>
       {user ?
